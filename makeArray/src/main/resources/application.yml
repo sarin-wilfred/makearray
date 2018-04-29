@@ -1,0 +1,60 @@
+spring:
+  profiles:
+    active: "dev"
+  main:
+    banner-mode: "off"
+
+---
+
+spring:
+  profiles: dev
+  cache:
+    type: NONE
+  resources:
+    chain:
+      cache: false
+    
+server:
+  port: 8083
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css
+  servlet:
+    contextPath: /makearray
+  
+---
+
+spring:
+  profiles: sit
+  cache:
+    type: NONE
+  resources:
+    chain:
+      cache: false
+    
+server:
+  port: 8083
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css
+  servlet:
+    contextPath: /makearray
+  
+  
+---
+
+spring:
+  profiles: prod
+  cache:
+    type: NONE
+  resources:
+    chain:
+      cache: false
+    
+server:
+  port: 8083
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css
+  servlet:
+    contextPath: /makearray
